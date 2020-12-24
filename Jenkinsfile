@@ -1,8 +1,9 @@
 pipeline {
   agent any 
-  tools {
-    maven 'Maven'
+    tools {
+      maven 'Maven'
   }
+  
   stages {
     stage ('Initialize') {
       steps {
@@ -20,6 +21,7 @@ pipeline {
       sh 'mvn clean package'
        }
     }
+    
     
     stage ('Software Composition Analysis') {
       steps {
