@@ -25,11 +25,11 @@ pipeline {
     
     stage ('Software Composition Analysis') {
       steps {
-         echo 'SCA'
-         /*sh 'rm -r dependency-check* || true' 
+         //echo 'SCA'
+         sh 'rm -r dependency-check* || true' 
          sh 'wget https://github.com/jeremylong/DependencyCheck/releases/download/v6.0.3/dependency-check-6.0.3-release.zip'
          sh 'unzip dependency-check-6.0.3-release.zip'
-         sh './dependency-check/bin/dependency-check.sh --scan ./* --enableRetired -f "ALL" '*/
+         sh './dependency-check/bin/dependency-check.sh --scan ./* --enableRetired -f "ALL" '
        }
     }
   } 
