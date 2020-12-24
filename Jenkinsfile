@@ -32,5 +32,5 @@ pipeline {
          sh './dependency-check/bin/dependency-check.sh --scan ./* --enableRetired -f "ALL" '*/
        }
     }
-  }
+  } 
 }
