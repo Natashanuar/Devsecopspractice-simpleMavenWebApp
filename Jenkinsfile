@@ -31,7 +31,6 @@ pipeline {
          sh 'unzip dependency-check-6.0.3-release.zip'
          sh './dependency-check/bin/dependency-check.sh --scan ./* --enableRetired -f "ALL" '*/
        }
-    
-    
+    }
   }
 }
