@@ -32,5 +32,15 @@ pipeline {
          sh './dependency-check/bin/dependency-check.sh --scan ./* --enableRetired -f "ALL" '
        }
     }
+    
+    
+     stage ('Deploy-To-Tomcat') {
+            steps {
+           /*sshagent(['tomcat']) {
+                sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@10.0.2.15:/home/ubuntu/prod/apache-tomcat-8.5.61/webapps/webapp.war'
+              }*/
+             echo 'Tomcat'
+           }      
+    }  
   } 
 }
